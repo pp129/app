@@ -1,5 +1,4 @@
-# app
-
+ionic DEMO
 ---
 
 	$ npm install
