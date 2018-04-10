@@ -1,3 +1,22 @@
 page-home {
-
+	ion-row {
+		border-top: 1px solid rgba(60, 60, 60, 0.3);
+		ion-col {
+			border-bottom: 1px solid rgba(60, 60, 60, 0.3);
+			border-right: 1px solid rgba(60, 60, 60, 0.3);
+		}
+		.no-border-right {
+			border-right: 0;
+		}
+	}
+	.menuIcon {
+		height: 9rem;
+		ion-icon {
+			font-size: 5rem;
+		}
+		.menuLabel {
+			width: 100%;
+			color: rgba(60, 60, 60, 0.7);
+		}
+	}
 }
