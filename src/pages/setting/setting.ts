@@ -24,7 +24,7 @@ export class SettingPage {
 	ionViewDidLoad() {
 		//console.log('ionViewDidLoad SettingPage');
 		this.getInfo().subscribe(res => {
-			this.userinfo = res.userinfo
+			this.userinfo = res
 		});
 		this.getUser().subscribe(res => {
 			this.username = res
@@ -34,6 +34,7 @@ export class SettingPage {
 	getInfo() {
 		return Observable.fromPromise(this.storage.get('userinfo')
 			.then((res) => {
+				console.log(res)
 				return res;
 			}));
 	}

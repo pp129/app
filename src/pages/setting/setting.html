@@ -16,7 +16,7 @@
     <ion-list class="top-list">
         <button ion-item [navPush]="">
             <ion-avatar item-left>
-                <img src="./assets/icon/user.jpg">
+                <img src="./assets/imgs/logo.png">
             </ion-avatar>
             <h2>{{userinfo?.name}}</h2>
             <p>账号：{{username}}</p>
@@ -24,15 +24,6 @@
     </ion-list>
 
     <ion-list>
-        <ion-item *ngIf="userinfo?.lv == '0'">
-            开发者权限
-        </ion-item>
-        <ion-item *ngIf="userinfo?.lv <= '1'">
-            管理员权限
-        </ion-item>
-        <ion-item>
-            游客权限
-        </ion-item>
         <button ion-item (click)="logOut()">
             注销
         </button>

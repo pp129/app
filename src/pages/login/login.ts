@@ -84,7 +84,9 @@ export class LoginPage {
 		} else {
 			var users = [];
 			var hasUser = false;
-			var userinfo;
+			var userinfo={
+				name:username.value
+			}
 			this.storage.set('username', username.value);
 			this.storage.set('userinfo', userinfo);
 			//console.log(this.remember)
