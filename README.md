@@ -23,8 +23,7 @@
   ionic serve #启动本地浏览器调试
 ```
 
-> 常用指令 看ionic-cli（command List）
-generate,build,cordova...
+> 常用指令 
 
 ```shell
   ionic g page YourPageName #创建新页面
@@ -34,7 +33,17 @@ generate,build,cordova...
   ionic g pipe YourPipeName #创建过滤器
 ```
 
-**伪造数据:** [easy-mock](https://www.easy-mock.com/)
+>打包/真机调试（以Android为例）
+
+```shell
+  ionic cordova platform add android #添加Android平台支持
+  ionic cordova run android #在虚拟器上运行程序
+  ionic cordova build android #开始打包apk
+```
+
+### 更多指令：[ionic-cli：command list](https://ionicframework.com/docs/cli/commands.html)
+
+### 伪造数据： [easy-mock](https://www.easy-mock.com/)
 
 ## 项目结构
 
@@ -54,7 +63,7 @@ generate,build,cordova...
 
 **tsconfig.json：** TypeScript 项目的根目录，指定用来编译这个项目的根文件和编译选项tslint.json：格式化和校验 typescript
 
-**src** 工作目录：
+### **src** 工作目录：
 
 > ***app：*** 应用根目录
 
