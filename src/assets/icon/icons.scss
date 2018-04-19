@@ -1,0 +1,24 @@
+
+@font-face {font-family: "Ionicons";
+	src: url('//at.alicdn.com/t/font_540126_cdx46u6cxynidx6r.eot');
+  src: url('//at.alicdn.com/t/font_540126_cdx46u6cxynidx6r.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_540126_cdx46u6cxynidx6r.woff') format('woff'),
+  url('//at.alicdn.com/t/font_540126_cdx46u6cxynidx6r.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_540126_cdx46u6cxynidx6r.svg#iconfont') format('svg');
+  }
+
+  .icon {
+	font-family:"Ionicons" !important;
+	font-size:16px;
+	font-style:normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
+
+
+  .ion-md-qq-outline:before { content: "\e61e"; }
+  .ion-ios-qq-outline:before { content: "\e61e"; }
+  .ion-md-qq:before { content: "\e66a"; }
+  .ion-ios-qq:before { content: "\e66a"; }
+
+

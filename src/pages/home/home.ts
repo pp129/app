@@ -34,8 +34,8 @@ export class HomePage {
 			param:{menuName:'mymission',title:'我的任务'},
 			color:'danger'
 		},{
-			name:'',
-			icon:'',
+			name:'自定义图标',
+			icon:'qq-outline',
 			url:'',
 			param:{menuName:'',title:''},
 			color:''

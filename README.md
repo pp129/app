@@ -23,7 +23,7 @@
   ionic serve #启动本地浏览器调试
 ```
 
-> 常用指令 
+### 常用指令
 
 ```shell
   ionic g page YourPageName #创建新页面
@@ -33,7 +33,7 @@
   ionic g pipe YourPipeName #创建过滤器
 ```
 
->打包/真机调试（以Android为例）
+### 打包/真机调试（以Android为例）
 
 ```shell
   ionic cordova platform add android #添加Android平台支持
@@ -41,9 +41,11 @@
   ionic cordova build android #开始打包apk
 ```
 
-### 更多指令：[ionic-cli：command list](https://ionicframework.com/docs/cli/commands.html)
+#### 更多指令：[ionic-cli：command list](https://ionicframework.com/docs/cli/commands.html)
 
-### 伪造数据： [easy-mock](https://www.easy-mock.com/)
+#### 伪造数据： [easy-mock](https://www.easy-mock.com/)
+
+#### 自定义图标：[阿里图表库](http://www.iconfont.cn/home/index), [引用方法](https://jingyan.baidu.com/article/3ea51489acddf452e61bba33.html)
 
 ## 项目结构
 
