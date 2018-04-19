@@ -65,16 +65,11 @@
 
 ### **src** 工作目录：
 
-> ***app：*** 应用根目录
-
-> ***assets：*** 资源目录（静态文件（图片，js 框架。。。）
-
-> ***pages：*** 页面文件，放置编写的页面文件，包括：html，scss，ts。
-
-> ***theme：*** 主题文件，里面有一个 scss 文件，设置主题信息。
-
-> ***providers：*** 也就是ng里的service。 当重复的需要一个类中的方法时，可封装它为服务类，以便重复使用，如http。
-
-> 可能还会有 ***directive、component、pipe ...***
+> ***app：*** 应用根目录  <br/>
+***assets：*** 资源目录（静态文件（图片，js 框架。。。  <br/>
+***pages：*** 页面文件，放置编写的页面文件，包括：html，scss，ts。
+***theme：*** 主题文件，里面有一个 scss 文件，设置主题信息。 <br/>
+***providers：*** 也就是ng里的service。 当重复的需要一个类中的方法时，可封装它为服务类，以便重复使用，如http。 <br/>
+可能还会有 ***directive、component、pipe ...***
 
 <img src="https://img-blog.csdn.net/20170905131004085?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvWmhhaUt1bjY4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
