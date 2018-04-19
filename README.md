@@ -11,7 +11,7 @@
 
 * node^6+
 * npm^3+
-* [Ionic CLI and Cordova](https://ionicframework.com/docs/cli/)
+* [Ionic CLI and Cordova](https://ionicframework.com/docs/intro/installation/)
 
 ## 使用
 
