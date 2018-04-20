@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { RestApiProvider } from '../../providers/rest-api/rest-api';
-import { LoadingController } from 'ionic-angular';
+import { Component, ViewChild } from "@angular/core";
+import { IonicPage, NavController, NavParams, Content } from "ionic-angular";
+import { RestApiProvider } from "../../providers/rest-api/rest-api";
+import { LoadingController } from "ionic-angular";
 
+//import { ElasticHeaderDirective } from "../../directives/elastic-header/elastic-header";
 /**
  * Generated class for the ListPage page.
  *
@@ -12,8 +13,8 @@ import { LoadingController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-	selector: 'page-list',
-	templateUrl: 'list.html',
+	selector: "page-list",
+	templateUrl: "list.html"
 })
 export class ListPage {
 	data: any;
@@ -30,75 +31,66 @@ export class ListPage {
 		public navCtrl: NavController,
 		public navParams: NavParams,
 		public restApi: RestApiProvider,
-		public loading: LoadingController) {
+		public loading: LoadingController
+	) {}
 
-	}
+	@ViewChild(Content) content: Content;
 
 	ionViewDidLoad() {
 		//console.log('ionViewDidLoad ListPage');
 		this.loader = this.loading.create({
-			content: '数据加载中...',
+			content: "数据加载中..."
 		});
 		this.loader.present().then(() => {
 			this.getUsers();
 		});
-		this.myParam = this.navParams.get('menuName');
-		this.title = this.navParams.get('title');
+		this.myParam = this.navParams.get("menuName");
+		this.title = this.navParams.get("title");
 	}
 	getUsers() {
-		this.restApi.getUsers(this.page, this.perPage)
-			.subscribe(
-				res => {
-					//console.log(res)
-					this.data = res['data'].res;
-					this.users = this.data.data;
-					//this.perPage = this.data.per_page;
-					this.totalData = this.data.total;
-					this.totalPage = this.data.total_pages;
-					this.loader.dismiss();
-				},
-				error => this.errorMessage = <any>error);
+		this.restApi.getUsers(this.page, this.perPage).subscribe(res => {
+			//console.log(res)
+			this.data = res["data"].res;
+			this.users = this.data.data;
+			//this.perPage = this.data.per_page;
+			this.totalData = this.data.total;
+			this.totalPage = this.data.total_pages;
+			this.loader.dismiss();
+		}, error => (this.errorMessage = <any>error));
 	}
 	doRefresh(refresher) {
-		console.log('DOREFRESH', refresher);
+		console.log("DOREFRESH", refresher);
 		this.users = [];
 		setTimeout(() => {
-			this.restApi.getUsers(1, this.perPage)
-				.subscribe(
-					res => {
-						///console.log(res)
-						this.data = res['data'].res;
-						//this.perPage = this.data.per_page;
-						this.totalData = this.data.total;
-						this.totalPage = this.data.total_pages;
-						for (let i = 0; i < this.data.data.length; i++) {
-							this.users.push(this.data.data[i]);
-						}
-					},
-					error => this.errorMessage = <any>error);
+			this.restApi.getUsers(1, this.perPage).subscribe(res => {
+				///console.log(res)
+				this.data = res["data"].res;
+				//this.perPage = this.data.per_page;
+				this.totalData = this.data.total;
+				this.totalPage = this.data.total_pages;
+				for (let i = 0; i < this.data.data.length; i++) {
+					this.users.push(this.data.data[i]);
+				}
+			}, error => (this.errorMessage = <any>error));
 
-			console.log('Async operation has ended');
+			console.log("Async operation has ended");
 			refresher.complete();
 		}, 1000);
-
 	}
 
 	doInfinite(infiniteScroll) {
 		this.page = this.page + 1;
 		setTimeout(() => {
-			this.restApi.getUsers(this.page, this.perPage)
-				.subscribe(
-					res => {
-						//console.log(res)
-						this.data = res['data'].res;
-						//this.perPage = this.data.per_page;
-						this.totalData = this.data.total;
-						this.totalPage = this.data.total_pages;
-						for (let i = 0; i < this.data.data.length; i++) {
-							this.users.push(this.data.data[i]);
-						}
-					},
-					error => this.errorMessage = <any>error);
+			this.restApi.getUsers(this.page, this.perPage).subscribe(res => {
+				//console.log(res)
+				this.data = res["data"].res;
+				//this.perPage = this.data.per_page;
+				this.totalData = this.data.total;
+				this.totalPage = this.data.total_pages;
+				for (let i = 0; i < this.data.data.length; i++) {
+					this.users.push(this.data.data[i]);
+				}
+			}, error => (this.errorMessage = <any>error));
 
 			//console.log('Async operation has ended');
 			infiniteScroll.complete();

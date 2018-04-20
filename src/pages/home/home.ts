@@ -12,7 +12,7 @@ export class HomePage {
 	menuItems: any;
 	first:boolean;
 	constructor(public navCtrl: NavController) {
-		this.list = ListPage;
+		this.list = 'ListPage';
 		this.params = { id: 42 };
 		this.first=true;
 		this.menuItems = [{
