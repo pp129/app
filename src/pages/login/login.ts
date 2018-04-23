@@ -76,11 +76,11 @@ export class LoginPage {
 		// let modal = this.modalCtrl.create(TabsPage);
 		// modal.present();
 		if (username.value.length == 0) {
-			alert("请输入账号");
+			this.toastCtrl.create({message:"请输入账号",duration:3000,position: 'bottom'}).present();
 		} else if (password.value.length == 0) {
-			alert("请输入密码");
+			this.toastCtrl.create({message:"请输入密码",duration:3000,position: 'bottom'}).present();
 		} else if (validatecode.value.length == 0) {
-			alert("请输入验证码");
+			this.toastCtrl.create({message:"请输入验证码",duration:3000,position: 'bottom'}).present();
 		} else {
 			var users = [];
 			var hasUser = false;

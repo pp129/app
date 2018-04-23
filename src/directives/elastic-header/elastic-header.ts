@@ -48,7 +48,7 @@ export class ElasticHeader {
     updateElasticHeader(){
 
         this.scrollTop = this.scrollerHandle.scrollTop;
-
+		console.log(this.scrollTop)
         if(this.scrollTop >= 0){
             this.translateAmt = this.scrollTop / 2;
             this.scaleAmt = 1;

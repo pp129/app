@@ -27,6 +27,7 @@ export class ListPage {
 	myParam: string;
 	title: string;
 	loader: any;
+	itemExpandHeight: number = 50;
 	constructor(
 		public navCtrl: NavController,
 		public navParams: NavParams,
@@ -56,6 +57,10 @@ export class ListPage {
 			this.totalData = this.data.total;
 			this.totalPage = this.data.total_pages;
 			this.loader.dismiss();
+			this.users.forEach(element => {
+				element['expanded'] = false
+			});
+			console.log(this.users);
 		}, error => (this.errorMessage = <any>error));
 	}
 	doRefresh(refresher) {
@@ -95,5 +100,17 @@ export class ListPage {
 			//console.log('Async operation has ended');
 			infiniteScroll.complete();
 		}, 1000);
+	}
+
+	expandItem(item) {
+		this.users.map(listItem => {
+			if (item == listItem) {
+				listItem['expanded'] = !listItem['expanded'];
+			} else {
+				listItem['expanded'] = false;
+			}
+
+			return listItem;
+		});
 	}
 }

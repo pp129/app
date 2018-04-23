@@ -17,8 +17,10 @@ import { SplashScreen } from "@ionic-native/splash-screen";
 //providers
 import { BackButtonServiceProvider } from "../providers/back-button-service/back-button-service"; //安卓按两下返回退出程序
 import { RestApiProvider } from "../providers/rest-api/rest-api"; //测试服务
-//directive
-
+//directives
+import { ElasticHeader } from "../directives/elastic-header/elastic-header";
+//components
+import { ExpandableHeader } from '../components/expandable-header/expandable-header';
 //https://www.angular.cn/guide/ngmodule-faq
 
 //1)、对于Component来说，必须import { IonicModule }，并在@NgModule的imports部分进行声明，其他的Directive和Pipe不需要；
@@ -32,7 +34,9 @@ import { RestApiProvider } from "../providers/rest-api/rest-api"; //测试服务
 		SettingPage,
 		HomePage,
 		TabsPage,
-		LoginPage
+		LoginPage,
+		ExpandableHeader,
+		ElasticHeader
 	],
 	imports: [
 		BrowserModule,
