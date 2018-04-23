@@ -10,5 +10,10 @@ export class AboutPage {
   constructor(public navCtrl: NavController) {
 
   }
-
+  doRefresh(refresher){
+    setTimeout(() => {
+		
+			refresher.complete();
+		}, 5000);
+  }
 }
