@@ -1,11 +1,10 @@
-import { NgModule } from '@angular/core';
-import { ExpandableHeader } from './expandable-header/expandable-header';
-import { AccordionList } from './accordion-list/accordion-list';
+import { NgModule } from "@angular/core";
+import { ExpandableHeader } from "./expandable-header/expandable-header";
+import { AccordionList } from "./accordion-list/accordion-list";
+
 @NgModule({
-	declarations: [ExpandableHeader,
-		AccordionList],
+	declarations: [ExpandableHeader, AccordionList],
 	imports: [],
-	exports: [ExpandableHeader,
-		AccordionList]
+	exports: [ExpandableHeader, AccordionList]
 })
 export class ComponentsModule {}

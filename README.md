@@ -23,7 +23,7 @@
   ionic serve #启动本地浏览器调试
 ```
 
-### 常用指令
+##### 常用指令
 
 ```shell
   ionic g page YourPageName #创建新页面
@@ -33,7 +33,7 @@
   ionic g pipe YourPipeName #创建过滤器
 ```
 
-### 打包/真机调试（以Android为例）
+##### 打包/真机调试（以Android为例）
 
 ```shell
   ionic cordova platform add android #添加Android平台支持
@@ -41,11 +41,11 @@
   ionic cordova build android #开始打包apk
 ```
 
-#### 更多指令：[ionic-cli：command list](https://ionicframework.com/docs/cli/commands.html)
+##### 更多指令：[ionic-cli：command list](https://ionicframework.com/docs/cli/commands.html)
 
-#### 伪造数据： [easy-mock](https://www.easy-mock.com/)
+##### 伪造数据： [easy-mock](https://www.easy-mock.com/)
 
-#### 自定义图标：[阿里图标库](http://www.iconfont.cn/home/index) / [引用方法](https://jingyan.baidu.com/article/3ea51489acddf452e61bba33.html)
+##### 自定义图标：[阿里图标库](http://www.iconfont.cn/home/index) / [引用方法](https://jingyan.baidu.com/article/3ea51489acddf452e61bba33.html)
 
 ## 项目结构
 
@@ -53,20 +53,49 @@
 
 ## 组件实例 src/components
 
-### accordion-list 可折叠list
+#### accordion-list 可折叠list
 
 > 使用 pages/list.html+pages/list.ts
 
-### expandable-header 可扩展Header
+#### expandable-header 可扩展Header
 
 > 使用 pages/about.html
 
 ## 指令实例 src/directives
 
-### elastic-header 伸缩Header
+#### elastic-header 伸缩Header
 
 > 使用 pages/setting.html
 
-### scroller-hide 滚动隐藏Header
+#### scroller-hide 滚动隐藏Header
 
 > 使用 pages/list.html+pages/list.ts
+
+## 地图的使用（baiduMap）
+
+> pages/baidu-map
+
+* **在web端会出现无法拖拽地图等问题，最好在虚拟器或真机下调试地图页面**
+
+1. [申请百度地图密匙](http://lbsyun.baidu.com/apiconsole/key?application=key)
+2. 在index.html中引用（尽量靠前）
+
+```html
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=你的密匙"></script>
+<!-- 写在这上面 -->
+<script src="cordova.js"></script>
+
+```
+
+## 图表的使用（echarts）
+
+#### 安装（本项目已装）
+
+```shell
+npm install echarts --save
+npm install @types/echarts --save
+```
+
+#### 使用
+
+> pages/charts

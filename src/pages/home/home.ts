@@ -6,14 +6,12 @@ import { NavController } from 'ionic-angular';
 	templateUrl: 'home.html'
 })
 export class HomePage {
-	params: Object;
+	//params: Object;
 	list: any;
 	menuItems: any;
-	first:boolean;
 	constructor(public navCtrl: NavController) {
 		this.list = 'ListPage';
-		this.params = { id: 42 };
-		this.first=true;
+		//this.params = { id: 42 };
 		this.menuItems = [{
 			name:'接单管理',
 			icon:'document',
@@ -37,19 +35,19 @@ export class HomePage {
 			icon:'qq-outline',
 			url:'',
 			param:{menuName:'',title:''},
-			color:''
+			color:'lightblue'
 		},{
-			name:'',
-			icon:'',
-			url:'',
+			name:'图表',
+			icon:'pie',
+			url:'ChartsPage',
 			param:{menuName:'',title:''},
-			color:''
+			color:'deeporange'
 		},{
-			name:'',
-			icon:'',
-			url:'',
+			name:'地图',
+			icon:'md-map',
+			url:'BaiduMapPage',
 			param:{menuName:'',title:''},
-			color:''
+			color:'cyan'
 		},{
 			name:'',
 			icon:'',
