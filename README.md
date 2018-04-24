@@ -91,7 +91,7 @@
 
 #### 安装（本项目已装）
 
-```shell
+```bash
 npm install echarts --save
 npm install @types/echarts --save
 ```
