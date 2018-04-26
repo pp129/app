@@ -49,11 +49,11 @@ export class HomePage {
 			param:{menuName:'',title:''},
 			color:'cyan'
 		},{
-			name:'',
-			icon:'',
-			url:'',
+			name:'表单',
+			icon:'ios-list-box',
+			url:'FormPage',
 			param:{menuName:'',title:''},
-			color:''
+			color:'teal'
 		},{
 			name:'',
 			icon:'',

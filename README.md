@@ -51,6 +51,18 @@
 
 <img src="https://img-blog.csdn.net/20170905131004085?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvWmhhaUt1bjY4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 
+## Angular表单的用法
+
+> pages/form   **采用Reactive 响应式表单**
+
+* [Angular表单简介](https://segmentfault.com/a/1190000009971088)
+
+### 响应式表单文档
+
+* [FormGroup](https://angular.cn/api/forms/FormGroup)
+* [FormBuilder](https://angular.cn/api/forms/FormBuilder)
+* [Validators](https://angular.cn/api/forms/Validators)
+
 ## 组件实例 src/components
 
 #### accordion-list 可折叠list
